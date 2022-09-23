@@ -70,7 +70,8 @@ const userController = {
           return res.status(404).json({ message: "No user found with this ID" });
         }
 
-  addFriend({ params }, res) {
+          addFriend({ params }, res) 
+          
     User.findOneAndUpdate(
       { _id: params.userId },
       { $addToSet: { friends: params.friendId } },
